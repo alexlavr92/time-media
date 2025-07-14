@@ -1,0 +1,112 @@
+.request {
+    .heading-wrapper {
+        margin-bottom: 30px;
+    }
+}
+
+$color-grey: #F5F5F5;
+
+.request-chief {
+    padding: 30px 20px;
+    background: $color-grey;
+
+    .link-wrapper {
+        margin-top: 30px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        padding: 25px 20px;
+
+        .link-wrapper {
+            margin-top: 25px;
+        }
+    }
+}
+
+.request-item {
+    gap: 20px;
+    align-items: flex-start;
+    line-height: 120%;
+    padding: 15px 0;
+    border-bottom: 1px solid $color-light-gray;
+
+    .date {
+        width: 105px;
+        font-size: .55rem;
+        color: $color-middle-gray;
+
+        @media screen and (max-width: 1199px) {
+            font-size: 13px;
+        }
+    }
+
+    .title {
+        flex: 1;
+        min-width: 0;
+        font-size: .75rem;
+        color: $color-main-text;
+
+        @media screen and (max-width: 1199px) {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 1199px) {
+        @include flex-column;
+        gap: 15px;
+    }
+}
+
+.request-sub {
+    background: $color-grey;
+    padding: 30px 20px;
+    @include flex-column;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    z-index: 0;
+
+    .title {
+        font-size: .9rem;
+        line-height: 120%;
+        font-weight: $font-bold;
+
+        @media screen and (max-width: 1199px) {
+            font-size: 20px;
+        }
+    }
+
+    .subtitle {
+        font-size: .6rem;
+
+        @media screen and (max-width: 1199px) {
+            font-size: 13px;
+            max-width: 60%;
+        }
+    }
+
+    >.img-wrapper {
+        position: absolute;
+        bottom: 10px;
+        right: -30px;
+        z-index: -1;
+
+        @media screen and (max-width: 1199px) {
+            max-width: 150px;
+            right: 0;
+            bottom: -10px;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .request .row>div+div {
+        margin-top: 25px;
+    }
+}

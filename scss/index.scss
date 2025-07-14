@@ -1,0 +1,44 @@
+/*
+Name: 			index.css
+Written by: 	Lavrinenko Aleksandr
+Theme Version:	1.0
+*/
+
+// bootstrap imrport
+// @import "bootstrap/bootstrap.scss";
+
+// COMMON IMPORTS
+@import "config/imports";
+
+// HELPERS
+@import "base/helpers";
+
+// BASE
+@import "base/base";
+
+
+// header
+@import "base/header";
+
+
+// TopNewsSlider
+@import "components/topnews-slider";
+
+//News
+@import "components/news";
+
+@import 'components/actual-news';
+
+//Expert Soviet
+@import "components/expert-soviet";
+
+@media screen and (max-width: 1199px) {
+    .expert-soviet .col-lg-12+.col-lg-12 {
+        margin-top: 25px;
+    }
+}
+
+
+@import 'components/request';
+// footer
+@import "base/footer";

@@ -1,0 +1,85 @@
+.clearfix {
+    &:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+/* Position */
+.p-relative {
+    position: relative !important;
+}
+
+.p-absolute {
+    position: absolute !important;
+}
+
+.p-fixed {
+    position: fixed !important;
+}
+
+/* Color Transparent */
+.color-transparent {
+    color: transparent !important;
+}
+
+/* Background No Repeat */
+.bg-no-repeat {
+    background-repeat: no-repeat !important;
+}
+
+/* Background Size Auto */
+.bg-size-auto {
+    background-size: auto !important;
+}
+
+/* Background Size Cover */
+.bg-size-cover {
+    background-size: cover !important;
+}
+
+/* Background Position Center */
+.bg-position-center {
+    background-position: center center !important;
+}
+
+/* Background Clip Text */
+.bg-clip-text {
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* Display flex */
+.flex-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer;
+}

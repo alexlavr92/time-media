@@ -1,0 +1,36 @@
+// TYPOGRAPHY
+// ---------------------------------------------------------------
+$font-main: "HelveticaNeueCyr";
+$font-normal: normal;
+$font-medium: 500;
+$font-bold: bold;
+$font-black: 900;
+// $font-tertiary: "Oswald", sans-serif;
+
+$min-font-size: 14;
+$max-font-size: 24;
+// $root-font-size: 16;
+$body-font-size: calcFluidFontSize($min-font-size, $max-font-size, 320, 1920, px);
+$body-line-height: 120;
+
+
+
+// COLORS
+$color-bg: #FFFFFF;
+$color-bg-second: #000000;
+$color-main-text: #000000;
+$color-second-text: #ffffff;
+$color-middle-gray: #6E6E6E;
+$color-light-gray: #DEDDDD;
+$color-red: #AA0101; // ---------------------------------------------------------------
+
+$placeholder-color: rgba(29, 36, 42, 0.7);
+
+// Animation
+// ---------------------------------------------------------------
+
+$transition: all .4s ease;
+$top-slider-duration: 2s;
+
+// Box Sizing
+$box-border: border-box;
