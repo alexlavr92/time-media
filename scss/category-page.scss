@@ -1,0 +1,159 @@
+/*
+Name: 			category-page.css
+Written by: 	Lavrinenko Aleksandr
+Theme Version:	1.0
+*/
+
+// bootstrap imrport
+// @import "bootstrap/bootstrap.scss";
+
+// COMMON IMPORTS
+@import "config/imports";
+
+// HELPERS
+@import "base/helpers";
+
+// BASE
+@import "base/base";
+
+
+// header
+@import "base/header";
+
+
+.category-title {
+    @include bg-style;
+    background-color: $color-bg-second;
+    color: $color-second-text;
+    padding: 90px 0;
+    position: relative;
+    z-index: 0;
+    border-top: 1px solid $color-middle-gray;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    .row>* {
+        position: initial;
+    }
+
+    .img-wrapper {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        left: 0;
+        z-index: -1;
+
+        picture,
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color-bg-second, .4);
+
+        }
+    }
+
+
+}
+
+.category-title-inner {
+    @include flex-column;
+    gap: 10px;
+    padding-left: 20px;
+    border-left: 6px solid $color-red;
+
+    .subtitle {
+
+        font-weight: $font-bold;
+        font-size: .9rem;
+        line-height: 120%;
+    }
+}
+
+.categories-item {
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $color-light-gray;
+    gap: 20px;
+    color: $color-main-text;
+
+
+
+    &+.categories-item {
+        margin-top: 30px;
+    }
+
+    .descript-wrapper {
+        @include flex-column;
+        gap: 15px;
+        flex: 1;
+        min-width: 0;
+        align-items: flex-start;
+    }
+
+    .date {
+        font-size: 13px;
+        line-height: 140%;
+        color: $color-middle-gray;
+    }
+
+    .title {
+        font-size: 20px;
+        line-height: 120%;
+        font-weight: $font-bold
+    }
+
+    .preview-text {
+        font-size: 17px;
+        line-height: 150%;
+        max-height: 55px;
+        overflow: hidden;
+    }
+
+    &:hover {
+
+        // .preview-text
+        .title {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+        }
+    }
+
+    .img-wrapper {
+        width: 200px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block
+        }
+    }
+}
+
+@import 'components/actual-news';
+
+
+.categories .actual-news-wrapper {
+    height: auto;
+    position: sticky;
+    top: 100px;
+}
+
+
+// footer
+@import "base/footer";

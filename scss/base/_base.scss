@@ -202,6 +202,14 @@ section {
     }
 }
 
+h1 {
+    font-weight: $font-bold;
+    font-size: 1.8rem;
+    line-height: 120%;
+    margin: 0;
+    padding: 0;
+}
+
 h2 {
     margin: 0;
     padding: 0;
@@ -300,5 +308,173 @@ h2 {
 
     @media screen and (max-width: 1199px) {
         font-size: 13px;
+    }
+}
+
+.breadcrumbs {
+    padding-top: 30px;
+
+    &+section {
+        padding-top: 30px;
+    }
+
+    .breadcrumbs-list {
+        gap: 5px;
+        align-items: center;
+        font-size: 13px;
+        line-height: 140%;
+
+        li {
+            position: relative;
+
+            &+li {
+                &:before {
+                    position: relative;
+                    display: inline-block;
+                    content: '/';
+                    margin-right: 5px;
+                    font-size: 13px;
+                    color: $color-middle-gray;
+                }
+            }
+        }
+
+        a {
+            color: $color-middle-gray;
+
+            &:hover {
+                color: $color-main-text;
+            }
+        }
+
+        span {
+            color: $color-middle-gray;
+        }
+    }
+}
+
+
+.pagination-wrapper {
+    padding-top: 30px;
+
+    .pagination-items {
+        align-items: center;
+        gap: 16px;
+
+        .pagination-nav a {
+            position: relative;
+            width: 12px;
+            display: block;
+            height: 12px;
+
+            >span {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                transform: translateY(-50%);
+                height: 2px;
+                background: $color-middle-gray;
+                transition: $transition;
+
+                &:before {
+                    width: 8px;
+                    height: 8px;
+                    content: '';
+                    position: absolute;
+                    transform: rotate(45deg);
+                    top: -3px;
+                    transition: $transition;
+                    z-index: 1;
+                }
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 150%;
+                height: 150%;
+            }
+
+            &:hover>span {
+                background: $color-red;
+            }
+        }
+
+        .pagination-nav.--prev a {
+            >span:before {
+                border-left: 2px solid $color-middle-gray;
+                border-bottom: 2px solid $color-middle-gray;
+                left: 0;
+            }
+
+            &:hover>span:before {
+                border-color: $color-red;
+            }
+        }
+
+        .pagination-nav.--next a {
+            >span:before {
+                border-right: 2px solid $color-middle-gray;
+                border-top: 2px solid $color-middle-gray;
+                right: 0;
+            }
+
+            &:hover>span:before {
+                border-color: $color-red;
+            }
+        }
+
+        .pagination-item {
+            color: $color-middle-gray;
+
+            a {
+                font-size: 17px;
+                line-height: 150%;
+                color: $color-middle-gray;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 120%;
+                    height: 120%;
+                }
+            }
+
+            &:not(.active) a:hover,
+            &.active a {
+                color: $color-red;
+            }
+
+            &.active a {
+                border-bottom: 1px solid $color-red;
+            }
+        }
+    }
+}
+
+.attention-wrapper {
+    width: 100%;
+    padding: 30px 20px;
+    background: #F5F5F5;
+    font-weight: $font-medium;
+    font-size: 16px;
+    line-height: 140%;
+
+    >a {
+        display: inline;
+        border-bottom: 1px solid;
+        color: $color-main-text;
+
+        &:hover {
+            border-color: transparent;
+        }
     }
 }
