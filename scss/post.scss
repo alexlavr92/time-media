@@ -1,0 +1,241 @@
+/*
+Name: 			post.css
+Written by: 	Lavrinenko Aleksandr
+Theme Version:	1.0
+*/
+
+// bootstrap imrport
+// @import "bootstrap/bootstrap.scss";
+
+// COMMON IMPORTS
+@import "config/imports";
+
+// HELPERS
+@import "base/helpers";
+
+// BASE
+@import "base/base";
+
+
+// header
+@import "base/header";
+
+.post {
+    .mt-30 {
+        margin-top: 30px;
+    }
+
+    .category {
+        padding-left: 10px;
+        border-left: 2px solid $color-red;
+        color: $color-middle-gray;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 120%;
+        font-weight: $font-bold;
+    }
+}
+
+.post-info {
+    color: $color-middle-gray;
+    font-size: 13px;
+    line-height: 140%;
+
+    .main-info {
+        gap: 22px;
+        align-items: center;
+        margin-top: 30px;
+
+        >div+div {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -11px;
+                top: 0;
+                width: 1px;
+                height: 100%;
+                background: $color-middle-gray
+            }
+        }
+
+        .time-read>* {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .time-read span {
+            margin-left: 3px;
+        }
+    }
+
+    .post-share {
+        margin-top: 10px;
+        gap: 10px;
+        align-items: center;
+
+        .post-shares-links {
+            gap: 10px;
+            align-items: center;
+
+            >a,
+            img {
+                display: block;
+            }
+        }
+    }
+}
+
+.post-inner {
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    .img-wrapper {
+        margin: 0;
+
+        &.--big {
+            padding-bottom: 30px;
+            border-bottom: 1px solid $color-light-gray;
+
+
+            figcaption {
+                font-size: 13px;
+                line-height: 140%;
+                padding-top: 15px;
+
+                >span {
+                    color: $color-middle-gray;
+                }
+            }
+        }
+    }
+
+    .post-text {
+        font-size: 17px;
+        line-height: 150%;
+
+        &+.img-wrapper {
+            margin-top: 30px;
+        }
+
+        p {
+            margin: 0;
+
+            >a {
+                display: inline;
+                color: inherit;
+                border-bottom: 1px solid;
+
+                &:hover {
+                    border-color: transparent;
+                }
+            }
+
+            &+p,
+            &+.with-new {
+                margin: 0;
+                margin-top: 20px;
+            }
+        }
+
+        .with-new+p,
+        h2 {
+            margin-top: 20px;
+        }
+
+        h2 {
+            padding-bottom: 10px;
+            padding-left: 0;
+            border-left: none;
+            font-weight: $font-bold;
+            text-transform: none;
+            font-size: 32px;
+            line-height: 120%;
+        }
+    }
+
+    .post-new {
+        // &.w-100 {
+        //     width: 100%;
+        // }
+
+        &+p {
+            margin-top: 20px;
+        }
+
+        &:not(.--vertical) {
+            margin-top: 20px;
+        }
+
+        padding: 15px 0;
+        border-top: 1px solid $color-light-gray;
+        border-bottom: 1px solid $color-light-gray;
+        gap: 20px;
+
+        .img-wrapper {
+            width: 200px;
+        }
+
+        .descript {
+            flex: 1;
+            min-width: 0;
+            @include flex-column;
+            gap: 15px;
+        }
+
+        // .category {
+        //     padding-left: 10px;
+        //     border-left: 2px solid $color-red;
+        //     color: $color-middle-gray;
+        //     text-transform: uppercase;
+        //     font-size: 12px;
+        //     line-height: 120%;
+        //     font-weight: $font-bold;
+        // }
+
+        .title {
+            font-weight: $font-medium;
+            font-size: 18px;
+            line-height: 140%;
+            color: $color-main-text;
+        }
+
+        &:hover .title {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+        }
+
+        &.--vertical {
+            @include flex-column;
+            gap: 15px;
+            margin-top: 5px;
+
+            .img-wrapper {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.tags-wrapper {
+    gap: 10px;
+}
+
+.actual-post-wrapper {
+    height: auto;
+    position: sticky;
+    top: 100px;
+}
+
+//News
+@import "components/news";
+
+//Actual posts
+@import 'components/actual-posts';
+
+// footer
+@import "base/footer";

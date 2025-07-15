@@ -182,10 +182,22 @@ section {
         padding-top: 30px;
     }
 
+    &:not(.grey):last-child {
+        margin-bottom: 30px;
+
+        @media screen and (max-width: 1199px) {
+            margin-bottom: 25px;
+        }
+    }
+
     &.grey {
         padding: 30px 0;
         margin-top: 30px;
         background: #F5F5F5;
+
+        @media screen and (max-width: 1199px) {
+            padding: 25px 0;
+        }
     }
 
     @media screen and (max-width: 1199px) {
@@ -223,6 +235,14 @@ h2 {
     @media screen and (max-width: 1199px) {
         font-size: 20px;
     }
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: $font-medium;
 }
 
 .heading-wrapper {

@@ -1,6 +1,6 @@
 footer {
     background: $color-bg-second;
-    margin-top: 30px;
+    // margin-top: 30px;
 }
 
 .footer-inner {
@@ -144,9 +144,9 @@ footer {
 }
 
 @media screen and (max-width: 1199px) {
-    footer {
-        margin-top: 25px;
-    }
+    // footer {
+    //     margin-top: 25px;
+    // }
 
     .footer-inner {
         padding: 25px 0;

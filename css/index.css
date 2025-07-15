@@ -659,10 +659,23 @@ ul {
 section:first-child, section + section {
   padding-top: 30px;
 }
+section:not(.grey):last-child {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1199px) {
+  section:not(.grey):last-child {
+    margin-bottom: 25px;
+  }
+}
 section.grey {
   padding: 30px 0;
   margin-top: 30px;
   background: #F5F5F5;
+}
+@media screen and (max-width: 1199px) {
+  section.grey {
+    padding: 25px 0;
+  }
 }
 @media screen and (max-width: 1199px) {
   section:first-child, section + section {
@@ -695,6 +708,14 @@ h2 {
   h2 {
     font-size: 20px;
   }
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 500;
 }
 
 .heading-wrapper {
@@ -2301,7 +2322,6 @@ header > * {
 }
 footer {
   background: #000000;
-  margin-top: 30px;
 }
 
 .footer-inner {
@@ -2457,9 +2477,6 @@ footer {
 }
 
 @media screen and (max-width: 1199px) {
-  footer {
-    margin-top: 25px;
-  }
   .footer-inner {
     padding: 25px 0;
     gap: 25px;
