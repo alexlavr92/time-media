@@ -713,9 +713,14 @@ h2 {
 h4 {
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 0.75rem;
   line-height: 140%;
   font-weight: 500;
+}
+@media screen and (max-width: 1199px) {
+  h4 {
+    font-size: 16px;
+  }
 }
 
 .heading-wrapper {
@@ -819,8 +824,18 @@ h4 {
 .breadcrumbs {
   padding-top: 30px;
 }
+@media screen and (max-width: 1199px) {
+  .breadcrumbs {
+    padding-top: 25px;
+  }
+}
 .breadcrumbs + section {
   padding-top: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .breadcrumbs + section {
+    padding-top: 15px;
+  }
 }
 .breadcrumbs .breadcrumbs-list {
   gap: 5px;
@@ -830,8 +845,26 @@ h4 {
   font-size: 13px;
   line-height: 140%;
 }
+@media screen and (max-width: 1199px) {
+  .breadcrumbs .breadcrumbs-list {
+    display: block;
+    white-space: nowrap;
+    overflow: auto;
+    margin: 0 -15px;
+    padding: 0 15px;
+    padding-bottom: 10px;
+  }
+}
 .breadcrumbs .breadcrumbs-list li {
   position: relative;
+}
+@media screen and (max-width: 1199px) {
+  .breadcrumbs .breadcrumbs-list li {
+    display: inline-block;
+  }
+  .breadcrumbs .breadcrumbs-list li + li {
+    margin-left: 0;
+  }
 }
 .breadcrumbs .breadcrumbs-list li + li:before {
   position: relative;
@@ -859,6 +892,13 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   gap: 16px;
+}
+@media screen and (max-width: 1199px) {
+  .pagination-wrapper .pagination-items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .pagination-wrapper .pagination-items .pagination-nav a {
   position: relative;
