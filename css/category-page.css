@@ -622,6 +622,9 @@ section.black {
   margin-top: 30px;
   background: #000000;
 }
+section.black:last-child {
+  margin-bottom: 0;
+}
 @media screen and (max-width: 1199px) {
   section:first-child, section + section {
     padding-top: 25px;
@@ -1855,6 +1858,8 @@ header > * {
   height: auto;
   position: sticky;
   top: 100px;
+  border-left: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
 }
 @media screen and (max-width: 1199px) {
   .categories .actual-news-wrapper {
