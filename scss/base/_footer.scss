@@ -42,7 +42,8 @@ footer {
         .title {
             font-size: .75rem;
             line-height: 140%;
-            font-weight: $font-medium
+            font-weight: $font-medium;
+            font-family: $font-second;
         }
     }
 }
@@ -86,10 +87,12 @@ footer {
         line-height: 140%;
         font-weight: $font-medium;
         color: $color-second-text;
+        font-family: $font-second;
 
         &:hover {
             text-decoration: underline;
-            text-underline-offset: 4px;
+            text-underline-offset: 6px;
+            text-decoration-thickness: 1px;
         }
     }
 

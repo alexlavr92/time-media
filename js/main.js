@@ -224,15 +224,15 @@ jQuery(document).ready(function ($) {
                 // console.log(options)
             }
             const sliderContainer = this.sliderWrapper.find('.swiper-container'),
-                PrevArrow = this.sliderWrapper.find('.swiper-button-prev'),
-                NextArrow = this.sliderWrapper.find('.swiper-button-next')
+                PrevArrow = this.sliderWrapper.closest('.soviet-wrapper').find('.swiper-button-prev'),
+                NextArrow = this.sliderWrapper.closest('.soviet-wrapper').find('.swiper-button-next')
 
             let swiper = new Swiper(sliderContainer, {
                 slidesPerView: 'auto',
                 spaceBetween: 0,
                 slidesPerGroup: 3,
                 speed: 1000,
-                // freeMode: true,
+                freeMode: true,
                 watchOverflow: true,
                 watchSlidesVisibility: true,
                 touchReleaseOnEdges: true,
