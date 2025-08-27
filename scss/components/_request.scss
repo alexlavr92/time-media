@@ -1,6 +1,16 @@
 .request {
+    margin-top: 30px;
+
     .heading-wrapper {
         margin-bottom: 30px;
+        justify-content: flex-start;
+        gap: 30px;
+
+        h2 {
+            font-size: 25px;
+            line-height: 128%;
+            letter-spacing: -0.02em;
+        }
     }
 }
 
@@ -10,16 +20,24 @@ $color-grey: #F5F5F5;
     padding: 30px 20px;
     background: $color-grey;
 
-    .link-wrapper {
+    .btn-wrapper {
         margin-top: 30px;
+    }
+
+    .btn {
+        padding: 6px 12px;
     }
 
     @media screen and (max-width: 1199px) {
         padding: 25px 20px;
 
-        .link-wrapper {
+        .btn-wrapper {
             margin-top: 25px;
         }
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 20px 15px;
     }
 }
 
@@ -67,6 +85,10 @@ $color-grey: #F5F5F5;
     height: 100%;
     z-index: 0;
 
+    @media screen and (max-width: 767px) {
+        padding: 20px 15px;
+    }
+
     .title {
         font-size: .9rem;
         line-height: 120%;
@@ -75,6 +97,10 @@ $color-grey: #F5F5F5;
         @media screen and (max-width: 1199px) {
             font-size: 20px;
         }
+    }
+
+    .btn {
+        padding: 6px 12px;
     }
 
     .subtitle {

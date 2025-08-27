@@ -39,6 +39,18 @@ Theme Version:	1.0
 }
 
 
+.adv-wrapper {
+    .img-link {
+        display: block;
+        width: 100%;
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+}
+
 @import 'components/request';
 // footer
 @import "base/footer";

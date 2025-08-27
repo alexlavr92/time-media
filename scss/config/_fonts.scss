@@ -45,3 +45,28 @@
     font-weight: 900;
     font-style: normal;
 }
+
+
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/Bitter-Regular.eot');
+    src: url('../fonts/Bitter-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Bitter-Regular.woff2') format('woff2'),
+        url('../fonts/Bitter-Regular.woff') format('woff'),
+        url('../fonts/Bitter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/Bitter-Medium.eot');
+    src: url('../fonts/Bitter-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Bitter-Medium.woff2') format('woff2'),
+        url('../fonts/Bitter-Medium.woff') format('woff'),
+        url('../fonts/Bitter-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

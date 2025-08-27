@@ -128,6 +128,7 @@ header {
     color: $color-second-text;
     position: sticky;
     top: 0;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 
 
     .row>* {
@@ -343,10 +344,12 @@ header {
             line-height: 140%;
             font-weight: $font-medium;
             color: $color-main-text;
+            font-family: $font-second;
+            font-weight: $font-medium;
 
             &:hover {
                 text-decoration: underline;
-                text-underline-offset: 4px;
+                text-underline-offset: 6px;
                 text-decoration-thickness: 1px;
             }
         }

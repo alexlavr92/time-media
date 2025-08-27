@@ -1,51 +1,41 @@
 .soviet-wrapper {
-    border-right: 1px solid $color-light-gray;
+    // border-right: 1px solid $color-light-gray;
+    padding-top: 30px;
 
     @media screen and (max-width: 1199px) {
         border-right: none;
     }
 
     .heading-wrapper {
-        padding-right: 20px;
         margin-bottom: 30px;
+        justify-content: flex-start;
+        gap: 30px;
 
         @media screen and (max-width: 767px) {
-            @include flex-column;
+            // @include flex-column;
+            align-items: center;
             gap: 20px;
             padding-right: 0;
             margin-bottom: 25px;
         }
-    }
 
-    .soviet-slider-wrapper {
-        position: relative;
-
-        @media screen and (max-width: 1199px) {
-            padding-bottom: 50px;
+        .btn {
+            padding: 6px 10px;
         }
 
         .swiper-navigation {
-            position: absolute;
-            top: calc(100% + 20px);
-            left: 20px;
-            gap: 20px;
             align-items: center;
-
-            @media screen and (max-width: 1199px) {
-                bottom: 0;
-                top: auto;
-                left: 0;
-            }
+            gap: 10px;
 
         }
 
         .swiper-button {
             position: relative;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            // border-radius: 50%;
             transition: $transition;
-            border: 1px solid $color-middle-gray;
+            // border: 1px solid $color-middle-gray;
             background-image: none;
             margin: 0;
             top: auto;
@@ -57,69 +47,51 @@
 
 
             >span {
-                width: 12px;
-                height: 1px;
+                width: 24px;
+                height: 24px;
                 position: absolute;
-                top: 14px;
+                top: 50%;
                 left: 50%;
-                transform: translateX(-50%);
-                background: $color-middle-gray;
-                transition: $transition;
-
-                &:after {
-                    content: '';
-                    position: absolute;
-                    width: 7px;
-                    height: 7px;
-                    // border-color: ;
-                    transition: $transition;
-                    transform: rotate(45deg);
-                }
+                transform: translate(-50%, -50%);
+                background-image: url(../media/icons/arrow-slider.svg);
+                @include bg-style;
+                background-size: 30%;
             }
 
-            &:not(.swiper-button-disabled):hover {
-                border-color: $color-red;
-
-                >span {
-                    background: $color-red;
-
-                    &:after {
-                        border-color: $color-red;
-                    }
-                }
-            }
-
-            &.swiper-button-prev span:after {
-                border-left: 1px solid $color-middle-gray;
-                border-bottom: 1px solid $color-middle-gray;
-                left: 1px;
-                top: -3px;
-            }
-
-            &.swiper-button-next span:after {
-                border-top: 1px solid $color-middle-gray;
-                border-right: 1px solid $color-middle-gray;
-                right: 1px;
-                top: -3px;
+            &.swiper-button-prev {
+                transform: rotate(-180deg);
             }
         }
     }
 
+    .soviet-slider-wrapper {
+        position: relative;
+
+        @media screen and (max-width: 767px) {
+            .swiper-container {
+                margin: 0 -15px;
+                padding: 0 15px;
+            }
+        }
+
+
+    }
+
     .swiper-slide {
-        width: 210px;
-        padding: 30px 0;
+        width: 290px;
+        padding: 30px;
         height: auto;
 
-        border: 1px solid $color-light-gray;
+        @media screen and (max-width: 767px) {
+            padding: 20px 15px;
+        }
 
-        &:first-child,
+        border: 1px solid $color-border-grey;
+
         &+.swiper-slide {
-            border-left: none
+            border-left: none;
         }
 
-        &:last-child {
-            border-right: none;
-        }
 
         .soviet-slide {
             @include flex-column;
@@ -132,8 +104,6 @@
             }
 
             .img-wrapper {
-                padding: 0 30px;
-                border-radius: 100px;
                 overflow: hidden;
             }
 
@@ -143,10 +113,14 @@
             }
 
             .title {
-                line-height: 140%;
-                font-size: .8rem;
+                //   font-weight: 600;
+                font-size: 20px;
+                line-height: 120%;
+                letter-spacing: -0.02em;
                 font-weight: $font-medium;
                 padding: 0 10px;
+
+                // font-family: $font-second;
 
                 @media screen and (max-width: 1199px) {
                     font-size: 18px;
@@ -155,7 +129,10 @@
 
             .subtitle {
                 font-size: .6rem;
-                color: $color-middle-gray;
+                // color: $color-middle-gray;
+                // font-size: 15px;
+                line-height: 133%;
+                letter-spacing: -0.02em;
                 padding: 0 10px;
 
                 @media screen and (max-width: 1199px) {
